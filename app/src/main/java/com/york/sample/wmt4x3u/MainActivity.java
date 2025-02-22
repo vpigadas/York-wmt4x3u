@@ -1,23 +1,58 @@
 package com.york.sample.wmt4x3u;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import org.jetbrains.annotations.NotNull;
+import com.york.sample.wmt4x3u.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+
+        binding.login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("BUTTON", "clicked!!!");
+
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.exit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+//        Button btnLogin = findViewById(R.id.login);
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("BUTTON", "clicked!!!");
+//
+//                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
+
+//    @Override
+//    public void onBackPressed() {
+//        //super.onBackPressed();
+//    }
 
     @Override
     protected void onStart() {

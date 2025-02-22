@@ -6,32 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button1"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="5"
-        android:text="ButtonButtonButtonButtonButtonButtonButton" />
+        android:text="Login"
+        app:cornerRadius="8dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button2"
-        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:padding="16dp"
-        android:text="ButtonButtonButtonButtonButtonButtonButton"
-        android:textColor="@color/black"
-        app:cornerRadius="16dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/black"
-        android:lines="5"
-        android:text="ButtonButtonButtonButtonButtonButtonButton" />
+        android:text="Exit"
+        app:cornerRadius="8dp" />
 </LinearLayout>
