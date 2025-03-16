@@ -1,4 +1,4 @@
-package gr.athtech.course.network;
+package com.york.sample.wmt4x3u.network;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -13,9 +13,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-
-import gr.athtech.course.databinding.ActivityNetworkBinding;
+import com.york.sample.wmt4x3u.databinding.ActivityNetworkBinding;
 
 public class NetworkActivity extends AppCompatActivity {
 

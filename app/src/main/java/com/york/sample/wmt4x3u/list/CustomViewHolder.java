@@ -1,11 +1,10 @@
-package gr.athtech.course.list;
+package com.york.sample.wmt4x3u.list;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
-import gr.athtech.course.databinding.HolderItemBinding;
+import com.york.sample.wmt4x3u.databinding.HolderItemBinding;
 
-public class CustomViewHolder extends RecyclerView.ViewHolder {
+public class CustomViewHolder extends BaseViewHolder {
 
     private HolderItemBinding binding;
 
@@ -14,6 +13,7 @@ public class CustomViewHolder extends RecyclerView.ViewHolder {
         this.binding = binding;
     }
 
+    @Override
     public void bind(String data) {
         binding.holderText.setText(data);
 //        TextView textView = itemView.findViewById(R.id.holder_text);

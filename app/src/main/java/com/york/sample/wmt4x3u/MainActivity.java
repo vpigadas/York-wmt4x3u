@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.york.sample.wmt4x3u.databinding.ActivityMainBinding;
+import com.york.sample.wmt4x3u.list.RecyclerActivity;
+import com.york.sample.wmt4x3u.network.NetworkActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,34 +22,43 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         binding.login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BUTTON", "clicked!!!");
-
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivityForResult(intent, 2000);
+            }
+        });
+
+        binding.mainBtnNetwork.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NetworkActivity.class);
+                intent.putExtra("title", "Network!!!");
                 startActivity(intent);
             }
         });
 
-        binding.exit.setOnClickListener(new View.OnClickListener() {
-
+        binding.mainBtnRecycler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                startActivity(intent);
             }
         });
-//        Button btnLogin = findViewById(R.id.login);
-//        btnLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d("BUTTON", "clicked!!!");
-//
-//                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (data != null) {
+            String name = data.getStringExtra("name");
+            int age = data.getIntExtra("age", 0);
+
+            Log.d("Main", "on Activity Result -> name:" + name + ", age:" + age);
+        }
+
     }
 
 //    @Override

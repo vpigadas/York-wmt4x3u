@@ -1,4 +1,4 @@
-package gr.athtech.course.network;
+package com.york.sample.wmt4x3u.network;
 
 import com.google.gson.annotations.SerializedName;
 
