@@ -8,9 +8,13 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.york.sample.wmt4x3u.bottomBar.BottomBarActivity;
+import com.york.sample.wmt4x3u.database.DatabaseActivity;
 import com.york.sample.wmt4x3u.databinding.ActivityMainBinding;
+import com.york.sample.wmt4x3u.fragment.CustomFragmentActivity;
 import com.york.sample.wmt4x3u.list.RecyclerActivity;
 import com.york.sample.wmt4x3u.network.NetworkActivity;
+import com.york.sample.wmt4x3u.viewpager.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +47,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.mainBtnFragments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CustomFragmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.mainBtnDatabase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DatabaseActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.mainBtnViewpager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.mainBtnBottomNav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BottomBarActivity.class);
                 startActivity(intent);
             }
         });

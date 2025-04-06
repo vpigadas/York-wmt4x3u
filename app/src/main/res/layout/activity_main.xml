@@ -34,4 +34,28 @@
         android:layout_height="wrap_content"
         android:text="RecyclerView" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Database" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn_fragments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragments" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ViewPager" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bottom Nav View" />
+
 </LinearLayout>

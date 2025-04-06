@@ -35,12 +35,12 @@ public class UserTable {
         this.name = name;
     }
 
-    public String getJob_title() {
+    public String getJobTitle() {
         return jobTitle;
     }
 
-    public void setJob_title(String job_title) {
-        this.jobTitle = job_title;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public int getAge() {
@@ -66,7 +66,7 @@ public class UserTable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserTable userTable = (UserTable) o;
-        return id == userTable.id && age == userTable.age && Objects.equals(name, userTable.name) && Objects.equals(job_title, userTable.job_title);
+        return id == userTable.id && age == userTable.age && Objects.equals(name, userTable.name) && Objects.equals(jobTitle, userTable.jobTitle);
     }
 
     @Override
