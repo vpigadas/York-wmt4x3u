@@ -14,6 +14,7 @@ import com.york.sample.wmt4x3u.databinding.ActivityMainBinding;
 import com.york.sample.wmt4x3u.fragment.CustomFragmentActivity;
 import com.york.sample.wmt4x3u.list.RecyclerActivity;
 import com.york.sample.wmt4x3u.network.NetworkActivity;
+import com.york.sample.wmt4x3u.viewmodel.ViewModelActivity;
 import com.york.sample.wmt4x3u.viewpager.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -79,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BottomBarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.mainBtnViewmodel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ViewModelActivity.class);
                 startActivity(intent);
             }
         });

@@ -2,6 +2,7 @@ package com.york.sample.wmt4x3u.database;
 
 
 import androidx.annotation.Nullable;
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -28,6 +29,9 @@ public interface UserDao {
 
     @Query("SELECT * FROM UserTable")
     public List<UserTable> retrieve();
+
+    @Query("SELECT * FROM UserTable")
+    public LiveData<List<UserTable>> retrieveAsyc();
 
     @Query("SELECT * FROM UserTable LIMIT 1")
     @Nullable
